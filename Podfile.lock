@@ -1,0 +1,66 @@
+PODS:
+  - Alamofire (5.2.2)
+  - AlamofireImage (4.1.0):
+    - Alamofire (~> 5.1)
+  - KeychainAccess (4.2.0)
+  - ObjectMapper (4.2.0)
+  - PhoneNumberKit (3.2.0):
+    - PhoneNumberKit/PhoneNumberKitCore (= 3.2.0)
+    - PhoneNumberKit/UIKit (= 3.2.0)
+  - PhoneNumberKit/PhoneNumberKitCore (3.2.0)
+  - PhoneNumberKit/UIKit (3.2.0):
+    - PhoneNumberKit/PhoneNumberKitCore
+  - SDWebImage (5.8.4):
+    - SDWebImage/Core (= 5.8.4)
+  - SDWebImage/Core (5.8.4)
+  - Spring (1.0.6)
+  - SQLite.swift (0.12.2):
+    - SQLite.swift/standard (= 0.12.2)
+  - SQLite.swift/standard (0.12.2)
+  - SwiftyJSON (5.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireImage
+  - KeychainAccess
+  - ObjectMapper
+  - PhoneNumberKit
+  - SDWebImage
+  - Spring (from `https://github.com/MengTo/Spring.git`)
+  - SQLite.swift
+  - SwiftyJSON
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireImage
+    - KeychainAccess
+    - ObjectMapper
+    - PhoneNumberKit
+    - SDWebImage
+    - SQLite.swift
+    - SwiftyJSON
+
+EXTERNAL SOURCES:
+  Spring:
+    :git: https://github.com/MengTo/Spring.git
+
+CHECKOUT OPTIONS:
+  Spring:
+    :commit: 50d92a5b9e08848387ae95bf44c6ad20834f7083
+    :git: https://github.com/MengTo/Spring.git
+
+SPEC CHECKSUMS:
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
+  KeychainAccess: 3f760109aa99b05d0f231e28b22642da7153e38a
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  PhoneNumberKit: df411d46177d1492da84e10b6c093846dd861452
+  SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
+  Spring: 3d113f14575ef79aec9c5f906dfa4f5001c03254
+  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+
+PODFILE CHECKSUM: 413d865c5cd367d51909c270f03d8b824d2fe915
+
+COCOAPODS: 1.9.3

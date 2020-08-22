@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="DP4-AY-l6u">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="CkY-Cy-4ZY" customClass="ProfileViewController" customModule="SkillBoxTester" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cpZ-pe-Y2S">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPj-0c-GTI">
+                                <rect key="frame" x="16" y="796" width="382" height="50"/>
+                                <color key="backgroundColor" red="0.8862745098" green="0.2901960784" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9Ta-4M-n4r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Log Out"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logOutTap:" destination="CkY-Cy-4ZY" eventType="touchUpInside" id="Eqd-ir-iJn"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="lJp-6A-JCi">
+                                <rect key="frame" x="16" y="84" width="382" height="209"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hHM-TQ-TLC">
+                                        <rect key="frame" x="131" y="0.0" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="Tl6-VJ-vFm"/>
+                                            <constraint firstAttribute="height" constant="120" id="lz5-Nb-pay"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GoT-ha-fv2">
+                                        <rect key="frame" x="166" y="159" width="50" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lJp-6A-JCi" firstAttribute="top" secondItem="Ld9-et-KOc" secondAttribute="top" constant="40" id="1LH-GS-o7y"/>
+                            <constraint firstItem="BPj-0c-GTI" firstAttribute="leading" secondItem="Ld9-et-KOc" secondAttribute="leading" constant="16" id="F0v-XF-yKF"/>
+                            <constraint firstItem="Ld9-et-KOc" firstAttribute="trailing" secondItem="BPj-0c-GTI" secondAttribute="trailing" constant="16" id="Hz8-1O-Bn8"/>
+                            <constraint firstItem="lJp-6A-JCi" firstAttribute="leading" secondItem="Ld9-et-KOc" secondAttribute="leading" constant="16" id="dcp-IN-PdG"/>
+                            <constraint firstItem="Ld9-et-KOc" firstAttribute="trailing" secondItem="lJp-6A-JCi" secondAttribute="trailing" constant="16" id="es5-0G-kkz"/>
+                            <constraint firstItem="Ld9-et-KOc" firstAttribute="bottom" secondItem="BPj-0c-GTI" secondAttribute="bottom" constant="16" id="hSK-n2-U8c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ld9-et-KOc"/>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="GoT-ha-fv2" id="vxh-Ll-FX8"/>
+                        <outlet property="imageView" destination="hHM-TQ-TLC" id="TFn-nA-Rv1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o0l-9L-5VE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141" y="-181"/>
+        </scene>
+    </scenes>
+</document>
