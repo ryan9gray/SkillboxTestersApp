@@ -175,13 +175,6 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		E56C1F5C24E5C95200EA5816 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		E56C1F6724E5D37000EA5816 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,7 +224,6 @@
 				E56C1F6724E5D37000EA5816 /* Services */,
 				E5FEEE8524E5B45F002D1D15 /* Models */,
 				E5FEEE7824E5B108002D1D15 /* Extensions */,
-				E56C1F5C24E5C95200EA5816 /* Views */,
 				E56C1F5024E5C5B400EA5816 /* Storyboards */,
 				E5FEEE6024E5AE59002D1D15 /* Assets.xcassets */,
 				E5FEEEAC24E5BC5B002D1D15 /* Localizable.strings */,

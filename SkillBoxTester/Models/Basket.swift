@@ -15,24 +15,12 @@ final class Basket: Mappable  {
         }
     }
 
-    static var isAuthorized: Bool {
-        current != nil
-    }
-
-    var id: Int = 0
-    var isConfirmed: Bool?
-    var email: String?
-    var phone: String?
-    var avatar: String?
-    var name: String = ""
+    var products: [Product] = []
 
     required init?(map: Map) { }
 
     func mapping(map: Map) {
-        id <- map["uid"]
-        email <- map["email"]
-        name <- map["first_name"]
-        phone <- map["phone"]
+		products <- map["products"]
     }
 
     func save() {
