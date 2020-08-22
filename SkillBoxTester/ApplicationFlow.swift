@@ -17,8 +17,6 @@ class ApplicationFlow {
     let basketFlow = BasketFlow()
     let discountFlow = DiscountFlow()
 
-    let networkService = NetworkService()
-
     func start() {
         profileFlow.start()
         feedFlow.start()

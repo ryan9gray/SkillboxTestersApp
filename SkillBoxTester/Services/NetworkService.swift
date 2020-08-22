@@ -8,27 +8,32 @@
 
 import Alamofire
 import ObjectMapper
+import SwiftyJSON
 
 /// Больно, но быстро (название твоего домашнего видео)
 class NetworkService {
 
+	static let shared = NetworkService()
+
+	static let baseUrl = "http://85.119.146.20:3000/"
 
     func getProducts(complition: @escaping ([Product]) -> Void) {
-        AF.request("https://httpbin.org/get").responseJSON { response in
+		AF.request(NetworkService.baseUrl + "api/v1/products/").responseJSON { response in
             debugPrint(response)
-            let products = Mapper<Product>().mapArray(JSONObject:response.description) ?? []
+			let json = JSON(response.data)["info"]["products"]
+			let products = Mapper<Product>().mapArray(JSONString: json.description) ?? []
             complition(products)
         }
     }
 
     func defineOriginalLanguage(ofText: String) {
         let text =  ofText
-        let stringURL = "basicURL" + "identify?version=2018-05-01"
+		let stringURL = NetworkService.baseUrl + "api/v1/products/"
         let url = URL(string: stringURL)
 
         var request = URLRequest(url: url!)
         request.httpMethod = HTTPMethod.post.rawValue
-        request.setValue("text/plain", forHTTPHeaderField: "Content-Type")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = text.data(using: .utf8)
 
         AF.request(request)

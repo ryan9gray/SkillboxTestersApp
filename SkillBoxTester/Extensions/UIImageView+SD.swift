@@ -15,10 +15,10 @@ extension UIImageView {
         placeholder: UIImage? = .from(color: Style.Color.lightGray)
     ) {
 		image = .from(color: Style.Color.lightGray)
-        guard let url = URL(string: string) else { return }
+        guard let url = URL(string: NetworkService.baseUrl + string) else { return }
         
         sd_setImage(
-            with: url,
+			with: url,
             placeholderImage: placeholder,
             options: [.scaleDownLargeImages]
         ) { [weak self] image, error, cacheType, _ in

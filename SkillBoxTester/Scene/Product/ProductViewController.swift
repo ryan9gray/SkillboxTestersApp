@@ -54,6 +54,9 @@ class ProductViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(cells: [CommentTableViewCell.self])
+		let tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0.5))
+		tableFooterView.backgroundColor = .clear
+		tableView.tableFooterView = tableFooterView
     }
 
 }

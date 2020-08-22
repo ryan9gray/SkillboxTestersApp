@@ -11,7 +11,7 @@ import UIKit
 class FeedFlow {
     let initialViewController: UINavigationController
 
-    let service = ApplicationFlow.shared.networkService
+	let service = NetworkService.shared
     
     init() {
         let navigationController = UINavigationController()
@@ -34,6 +34,6 @@ class FeedFlow {
     }
 
     func fetchProducts(complition: @escaping ([Product]) -> Void) {
-
+		service.getProducts(complition: complition)
     }
 }

@@ -12,15 +12,22 @@ final class Product: Mappable {
     var title: String = ""
     var price: String = ""
     var imageUrl: String = ""
+	var date: String = ""
+	var size: Size?
+	var info: String = ""
 
     required init?(map: Map) {}
 
     func mapping(map: Map) {
         title       <- map["name"]
         price       <- map["price"]
-        imageUrl       <- map["imageUrl"]
+        imageUrl       <- map["productImage"]
+		date       <- map["date"]
+		size       <- map["size"]
+		info       <- map["info"]
     }
 }
+
 final class Comment: Mappable {
     var text: String = ""
     var user: String = ""
@@ -32,3 +39,15 @@ final class Comment: Mappable {
         user       <- map["user"]
     }
 }
+final class Size: Mappable {
+	var height: Int = 0
+	var width: Int = 0
+
+	required init?(map: Map) {}
+
+	func mapping(map: Map) {
+		height       <- map["height"]
+		width       <- map["width"]
+	}
+}
+
