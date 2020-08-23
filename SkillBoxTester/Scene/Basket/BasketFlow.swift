@@ -14,6 +14,12 @@ class BasketFlow {
     init() {
         let navigationController = UINavigationController()
         initialViewController = navigationController
+
+        if !LocalStore.notFirstLaunch {
+            Basket.current = Basket()
+            Basket.current?.save()
+            LocalStore.notFirstLaunch = true
+        }
     }
 
     func start() {

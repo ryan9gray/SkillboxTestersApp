@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17147" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17120"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,44 +19,17 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yBJ-z8-dUq">
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <view key="tableHeaderView" contentMode="scaleToFill" id="T6D-XD-Aip">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TotalCost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YzY-El-jqX">
-                                            <rect key="frame" x="8" y="8" width="73" height="59"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfO-3T-35G">
-                                            <rect key="frame" x="395.5" y="8" width="10.5" height="59"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    <constraints>
-                                        <constraint firstItem="YzY-El-jqX" firstAttribute="leading" secondItem="T6D-XD-Aip" secondAttribute="leading" constant="8" id="0H8-dg-8qN"/>
-                                        <constraint firstItem="YzY-El-jqX" firstAttribute="top" secondItem="T6D-XD-Aip" secondAttribute="top" constant="8" id="1ut-es-9UK"/>
-                                        <constraint firstItem="yfO-3T-35G" firstAttribute="top" secondItem="T6D-XD-Aip" secondAttribute="top" constant="8" id="P8T-gr-ACB"/>
-                                        <constraint firstAttribute="bottom" secondItem="yfO-3T-35G" secondAttribute="bottom" constant="8" id="efs-EA-Ewo"/>
-                                        <constraint firstAttribute="bottom" secondItem="YzY-El-jqX" secondAttribute="bottom" constant="8" id="jN8-tZ-sxh"/>
-                                        <constraint firstAttribute="trailing" secondItem="yfO-3T-35G" secondAttribute="trailing" constant="8" id="wUH-vd-8v1"/>
-                                    </constraints>
-                                </view>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="XCG-fh-i5b"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="yBJ-z8-dUq" firstAttribute="trailing" secondItem="XCG-fh-i5b" secondAttribute="trailing" id="HkL-gt-e8u"/>
                             <constraint firstItem="yBJ-z8-dUq" firstAttribute="leading" secondItem="XCG-fh-i5b" secondAttribute="leading" id="YIB-H5-MqY"/>
                             <constraint firstItem="yBJ-z8-dUq" firstAttribute="top" secondItem="XCG-fh-i5b" secondAttribute="top" id="aax-AU-RYu"/>
                             <constraint firstAttribute="bottom" secondItem="yBJ-z8-dUq" secondAttribute="bottom" id="dLO-km-vCn"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="XCG-fh-i5b"/>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="yBJ-z8-dUq" id="Gwk-PJ-Smu"/>
@@ -66,4 +40,9 @@
             <point key="canvasLocation" x="-182.60869565217394" y="46.875"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

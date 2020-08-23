@@ -8,13 +8,14 @@
 
 import ObjectMapper
 
-final class Product: Mappable {
+final class Product: Mappable, Hashable {
     var title: String = ""
     var price: String = ""
     var imageUrl: String = ""
 	var date: String = ""
 	var size: Size?
 	var info: String = ""
+    var id: String = ""
 
     required init?(map: Map) {}
 
@@ -25,20 +26,36 @@ final class Product: Mappable {
 		date       <- map["date"]
 		size       <- map["size"]
 		info       <- map["info"]
+        id       <- map["_id"]
+    }
+    static func == (lhs: Product, rhs: Product) -> Bool {
+        lhs.id == rhs.id
+    }
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
     }
 }
 
 final class Comment: Mappable {
     var text: String = ""
-    var user: String = ""
+    var userId: String = ""
+    var userName: String = ""
+    var productId: String = ""
+    var id: String = ""
+    var subComments: [Comment] = []
 
     required init?(map: Map) {}
 
     func mapping(map: Map) {
         text       <- map["text"]
-        user       <- map["user"]
+        userId       <- map["userId"]
+        userName       <- map["userName"]
+        id       <- map["_id"]
+        productId       <- map["productId"]
+        subComments       <- map["subComments"]
     }
 }
+
 final class Size: Mappable {
 	var height: Int = 0
 	var width: Int = 0

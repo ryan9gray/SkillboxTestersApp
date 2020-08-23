@@ -15,8 +15,38 @@ final class Basket: Mappable  {
         }
     }
 
-    var products: [Product] = []
+    var products: [Product: Int] = [:]
 
+    func addToCart(_ product: Product) {
+        if inBusket(product) {
+            products[product]! += 1
+        } else {
+            products[product] = 1
+        }
+        save()
+    }
+
+    func remove(_ product: Product) {
+        if let count = products[product] {
+            if count > 1 {
+                products[product]! -= 1
+            } else {
+                products[product] = nil
+            }
+        }
+    }
+
+    func count(of product: Product) -> Int {
+        products[product] ?? 0
+    }
+
+    func inBusket(_ product: Product) -> Bool {
+        count(of: product) > 0
+    }
+
+    init() {
+    }
+    
     required init?(map: Map) { }
 
     func mapping(map: Map) {

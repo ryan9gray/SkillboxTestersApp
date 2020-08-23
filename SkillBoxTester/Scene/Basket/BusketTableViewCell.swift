@@ -18,7 +18,9 @@ class BusketTableViewCell: UITableViewCell {
     var count: Int = 1
 
     struct Output {
-        var countDidChange: (Int) -> Void
+        var plus: () -> Void
+        var minus: () -> Void
+
     }
     var output: Output!
 
@@ -31,20 +33,22 @@ class BusketTableViewCell: UITableViewCell {
         guard count > 0 else { return }
 
         count -= 1
-        titleLabel.text = count.stringValue
-        output.countDidChange(count)
+        countLabel.text = count.stringValue
+        output.minus()
     }
 
     @IBAction func plusTap(_ sender: Any) {
         count += 1
-        titleLabel.text = count.stringValue
-        output.countDidChange(count)
+        countLabel.text = count.stringValue
+        output.plus()
     }
 
-    func set(title: NSAttributedString, subtitle: NSAttributedString?, imageUrl: String) {
+    func set(title: NSAttributedString, subtitle: NSAttributedString?, imageUrl: String, count: Int) {
         productImageView.setImageWithSD(from: imageUrl)
         titleLabel.attributedText = title
         priceLabel.attributedText = subtitle
         priceLabel.isHidden = subtitle == nil
+        self.count = count
+        countLabel.text = count.stringValue
     }
 }

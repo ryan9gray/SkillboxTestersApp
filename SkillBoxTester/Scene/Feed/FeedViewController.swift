@@ -18,8 +18,9 @@ class FeedViewController: UIViewController {
     }
 
     struct Output {
+        var priductTap: (Product) -> Void
     }
-    
+    var output: Output!
     struct Input {
         var getItems: (_ completion: @escaping ([Product]) -> Void) -> Void
     }
@@ -50,6 +51,13 @@ class FeedViewController: UIViewController {
 }
 
 extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = items[indexPath.row]
+        output.priductTap(item)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         items.count
     }

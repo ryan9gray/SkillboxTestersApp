@@ -26,6 +26,16 @@ class NetworkService {
         }
     }
 
+    func getComments(id: String, complition: @escaping ([Comment]) -> Void) {
+        AF.request(NetworkService.baseUrl + "api/v1/products/\(id)/comments").responseJSON { response in
+            debugPrint(response)
+            let json = JSON(response.data)["info"]["comments"]
+            let comment = Mapper<Comment>().mapArray(JSONString: json.description) ?? []
+            complition(comment)
+        }
+    }
+
+
     func defineOriginalLanguage(ofText: String) {
         let text =  ofText
 		let stringURL = NetworkService.baseUrl + "api/v1/products/"

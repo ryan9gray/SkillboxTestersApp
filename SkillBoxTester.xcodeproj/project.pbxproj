@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B9CBDFFEE672CFAD188A0B2B /* Pods_SkillBoxTester.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B674052E3AA0A4ECC5F0E1D /* Pods_SkillBoxTester.framework */; };
+		E510BFD724F291AF00492DEE /* FormKeyboardBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E510BFD624F291AF00492DEE /* FormKeyboardBehavior.swift */; };
+		E510BFD924F2973500492DEE /* ProductFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E510BFD824F2973500492DEE /* ProductFlow.swift */; };
+		E510BFDB24F29AED00492DEE /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E510BFDA24F29AED00492DEE /* LocalStore.swift */; };
 		E56C1F5324E5C62000EA5816 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56C1F5224E5C62000EA5816 /* Auth.storyboard */; };
 		E56C1F5524E5C62800EA5816 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56C1F5424E5C62800EA5816 /* Feed.storyboard */; };
 		E56C1F5724E5C63300EA5816 /* Discount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56C1F5624E5C63300EA5816 /* Discount.storyboard */; };
@@ -70,6 +73,9 @@
 		8B674052E3AA0A4ECC5F0E1D /* Pods_SkillBoxTester.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkillBoxTester.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE5412F190F963FEA81E780D /* Pods-SkillBoxTester.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkillBoxTester.debug.xcconfig"; path = "Target Support Files/Pods-SkillBoxTester/Pods-SkillBoxTester.debug.xcconfig"; sourceTree = "<group>"; };
 		B227BEC038E98730C942F885 /* Pods-SkillBoxTester.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkillBoxTester.release.xcconfig"; path = "Target Support Files/Pods-SkillBoxTester/Pods-SkillBoxTester.release.xcconfig"; sourceTree = "<group>"; };
+		E510BFD624F291AF00492DEE /* FormKeyboardBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormKeyboardBehavior.swift; sourceTree = "<group>"; };
+		E510BFD824F2973500492DEE /* ProductFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFlow.swift; sourceTree = "<group>"; };
+		E510BFDA24F29AED00492DEE /* LocalStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
 		E56C1F5224E5C62000EA5816 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		E56C1F5424E5C62800EA5816 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		E56C1F5624E5C63300EA5816 /* Discount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Discount.storyboard; sourceTree = "<group>"; };
@@ -189,6 +195,7 @@
 				E5F657D724F13F4B0058F549 /* ProductViewController.swift */,
 				E5F657DB24F15D0F0058F549 /* CommentTableViewCell.swift */,
 				E5F657DC24F15D0F0058F549 /* CommentTableViewCell.xib */,
+				E510BFD824F2973500492DEE /* ProductFlow.swift */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -260,6 +267,8 @@
 		E5FEEE7324E5AFDA002D1D15 /* Workers */ = {
 			isa = PBXGroup;
 			children = (
+				E510BFDA24F29AED00492DEE /* LocalStore.swift */,
+				E510BFD624F291AF00492DEE /* FormKeyboardBehavior.swift */,
 				E5FEEE7F24E5B28C002D1D15 /* Style.swift */,
 				E5FEEE7424E5AFE4002D1D15 /* ViewHierarchyWorker.swift */,
 			);
@@ -496,6 +505,7 @@
 				E5FEEE9824E5B5E0002D1D15 /* LocationCacher.swift in Sources */,
 				E5FEEE9524E5B5E0002D1D15 /* LogsCacher.swift in Sources */,
 				E5FEEEA524E5BBB8002D1D15 /* DiscountViewController.swift in Sources */,
+				E510BFD724F291AF00492DEE /* FormKeyboardBehavior.swift in Sources */,
 				E5FEEE9D24E5B73E002D1D15 /* Result.swift in Sources */,
 				E56C1F6424E5CACD00EA5816 /* UIImageView+SD.swift in Sources */,
 				E5FEEE7C24E5B21A002D1D15 /* MainTabBarController.swift in Sources */,
@@ -503,6 +513,7 @@
 				E56C1F6624E5CFA100EA5816 /* UIView.swift in Sources */,
 				E5FEEE7024E5AF1E002D1D15 /* RegViewController.swift in Sources */,
 				E5FEEE7224E5AF3D002D1D15 /* AuthViewController.swift in Sources */,
+				E510BFD924F2973500492DEE /* ProductFlow.swift in Sources */,
 				E5FEEEA024E5B767002D1D15 /* UITableView.swift in Sources */,
 				E5FEEE5624E5AE57002D1D15 /* AppDelegate.swift in Sources */,
 				E5FEEE7A24E5B118002D1D15 /* UIViewController.swift in Sources */,
@@ -519,6 +530,7 @@
 				E5FEEE8224E5B403002D1D15 /* FeedViewController.swift in Sources */,
 				E5F657DA24F1498E0058F549 /* NetworkService.swift in Sources */,
 				E5FEEE8024E5B28C002D1D15 /* Style.swift in Sources */,
+				E510BFDB24F29AED00492DEE /* LocalStore.swift in Sources */,
 				E5FEEE9724E5B5E0002D1D15 /* SqliteCacher+ExirableCacherType.swift in Sources */,
 				E5FEEEB724E5C039002D1D15 /* BasketFlow.swift in Sources */,
 				E5FEEEA124E5B767002D1D15 /* UITableViewCell.swift in Sources */,
