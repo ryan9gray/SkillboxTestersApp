@@ -26,9 +26,9 @@ struct ViewHierarchyWorker {
             }
             guard !isAlreadyReseted() else { return }
 
-			let authNavigationController = UINavigationController()
-			authNavigationController.setViewControllers([AuthViewController.instantiate(fromStoryboard: .autorization)], animated: true)
-            ViewHierarchyWorker.setRootViewController(authNavigationController)
+            let flow = AuthFlow()
+            flow.start()
+            ViewHierarchyWorker.setRootViewController(flow.initialViewController)
         }
     }
     

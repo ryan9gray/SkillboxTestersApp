@@ -11,6 +11,8 @@
 		E510BFD724F291AF00492DEE /* FormKeyboardBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E510BFD624F291AF00492DEE /* FormKeyboardBehavior.swift */; };
 		E510BFD924F2973500492DEE /* ProductFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E510BFD824F2973500492DEE /* ProductFlow.swift */; };
 		E510BFDB24F29AED00492DEE /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E510BFDA24F29AED00492DEE /* LocalStore.swift */; };
+		E510BFDD24F2B03600492DEE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E510BFDC24F2B03600492DEE /* GoogleService-Info.plist */; };
+		E510BFDF24F2B11600492DEE /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E510BFDE24F2B11600492DEE /* AuthService.swift */; };
 		E56C1F5324E5C62000EA5816 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56C1F5224E5C62000EA5816 /* Auth.storyboard */; };
 		E56C1F5524E5C62800EA5816 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56C1F5424E5C62800EA5816 /* Feed.storyboard */; };
 		E56C1F5724E5C63300EA5816 /* Discount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56C1F5624E5C63300EA5816 /* Discount.storyboard */; };
@@ -21,6 +23,7 @@
 		E56C1F6324E5CACD00EA5816 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56C1F6124E5CACC00EA5816 /* UIImage.swift */; };
 		E56C1F6424E5CACD00EA5816 /* UIImageView+SD.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56C1F6224E5CACD00EA5816 /* UIImageView+SD.swift */; };
 		E56C1F6624E5CFA100EA5816 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56C1F6524E5CFA100EA5816 /* UIView.swift */; };
+		E574764724F3F3ED00E8D207 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574764624F3F3ED00E8D207 /* ProductService.swift */; };
 		E5F657CD24F127CB0058F549 /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F657CC24F127CB0058F549 /* Basket.swift */; };
 		E5F657D024F131CA0058F549 /* BusketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F657CE24F131CA0058F549 /* BusketTableViewCell.swift */; };
 		E5F657D124F131CA0058F549 /* BusketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5F657CF24F131CA0058F549 /* BusketTableViewCell.xib */; };
@@ -36,7 +39,6 @@
 		E5FEEE6124E5AE59002D1D15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5FEEE6024E5AE59002D1D15 /* Assets.xcassets */; };
 		E5FEEE6424E5AE59002D1D15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5FEEE6224E5AE59002D1D15 /* LaunchScreen.storyboard */; };
 		E5FEEE6C24E5AED6002D1D15 /* ApplicationFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FEEE6B24E5AED6002D1D15 /* ApplicationFlow.swift */; };
-		E5FEEE7024E5AF1E002D1D15 /* RegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FEEE6F24E5AF1E002D1D15 /* RegViewController.swift */; };
 		E5FEEE7224E5AF3D002D1D15 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FEEE7124E5AF3D002D1D15 /* AuthViewController.swift */; };
 		E5FEEE7524E5AFE4002D1D15 /* ViewHierarchyWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FEEE7424E5AFE4002D1D15 /* ViewHierarchyWorker.swift */; };
 		E5FEEE7A24E5B118002D1D15 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FEEE7924E5B118002D1D15 /* UIViewController.swift */; };
@@ -76,6 +78,8 @@
 		E510BFD624F291AF00492DEE /* FormKeyboardBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormKeyboardBehavior.swift; sourceTree = "<group>"; };
 		E510BFD824F2973500492DEE /* ProductFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFlow.swift; sourceTree = "<group>"; };
 		E510BFDA24F29AED00492DEE /* LocalStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
+		E510BFDC24F2B03600492DEE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E510BFDE24F2B11600492DEE /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		E56C1F5224E5C62000EA5816 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		E56C1F5424E5C62800EA5816 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		E56C1F5624E5C63300EA5816 /* Discount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Discount.storyboard; sourceTree = "<group>"; };
@@ -86,6 +90,7 @@
 		E56C1F6124E5CACC00EA5816 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImage.swift; path = ../../../Mems/Mems/Extensions/UIImage.swift; sourceTree = "<group>"; };
 		E56C1F6224E5CACD00EA5816 /* UIImageView+SD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+SD.swift"; sourceTree = "<group>"; };
 		E56C1F6524E5CFA100EA5816 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		E574764624F3F3ED00E8D207 /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
 		E5F657CC24F127CB0058F549 /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
 		E5F657CE24F131CA0058F549 /* BusketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusketTableViewCell.swift; sourceTree = "<group>"; };
 		E5F657CF24F131CA0058F549 /* BusketTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusketTableViewCell.xib; sourceTree = "<group>"; };
@@ -103,7 +108,6 @@
 		E5FEEE6324E5AE59002D1D15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5FEEE6524E5AE59002D1D15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5FEEE6B24E5AED6002D1D15 /* ApplicationFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationFlow.swift; sourceTree = "<group>"; };
-		E5FEEE6F24E5AF1E002D1D15 /* RegViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegViewController.swift; sourceTree = "<group>"; };
 		E5FEEE7124E5AF3D002D1D15 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		E5FEEE7424E5AFE4002D1D15 /* ViewHierarchyWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHierarchyWorker.swift; sourceTree = "<group>"; };
 		E5FEEE7924E5B118002D1D15 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
@@ -196,6 +200,7 @@
 				E5F657DB24F15D0F0058F549 /* CommentTableViewCell.swift */,
 				E5F657DC24F15D0F0058F549 /* CommentTableViewCell.xib */,
 				E510BFD824F2973500492DEE /* ProductFlow.swift */,
+				E574764624F3F3ED00E8D207 /* ProductService.swift */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -233,6 +238,7 @@
 				E5FEEE7824E5B108002D1D15 /* Extensions */,
 				E56C1F5024E5C5B400EA5816 /* Storyboards */,
 				E5FEEE6024E5AE59002D1D15 /* Assets.xcassets */,
+				E510BFDC24F2B03600492DEE /* GoogleService-Info.plist */,
 				E5FEEEAC24E5BC5B002D1D15 /* Localizable.strings */,
 				E5FEEE6224E5AE59002D1D15 /* LaunchScreen.storyboard */,
 				E5F657DF24F164D60058F549 /* InfoPlist.strings */,
@@ -249,19 +255,19 @@
 				E5FEEEBE24E5C079002D1D15 /* Basket */,
 				E5FEEEBD24E5C070002D1D15 /* Profile */,
 				E5FEEEBC24E5C068002D1D15 /* Feed */,
-				E5FEEE6E24E5AF05002D1D15 /* Reg */,
+				E5FEEE6E24E5AF05002D1D15 /* Auth */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
 		};
-		E5FEEE6E24E5AF05002D1D15 /* Reg */ = {
+		E5FEEE6E24E5AF05002D1D15 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
 				E5FEEE7124E5AF3D002D1D15 /* AuthViewController.swift */,
-				E5FEEE6F24E5AF1E002D1D15 /* RegViewController.swift */,
 				E5FEEEBA24E5C05D002D1D15 /* AuthFlow.swift */,
+				E510BFDE24F2B11600492DEE /* AuthService.swift */,
 			);
-			path = Reg;
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		E5FEEE7324E5AFDA002D1D15 /* Workers */ = {
@@ -377,6 +383,7 @@
 				E5FEEE4F24E5AE57002D1D15 /* Frameworks */,
 				E5FEEE5024E5AE57002D1D15 /* Resources */,
 				216552E313D3A6A44EC733BD /* [CP] Embed Pods Frameworks */,
+				4181515F6D932B9C4E3FECAC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -439,6 +446,7 @@
 				E56C1F6024E5C97D00EA5816 /* ProductTableViewCell.xib in Resources */,
 				E56C1F5724E5C63300EA5816 /* Discount.storyboard in Resources */,
 				E5FEEE5F24E5AE57002D1D15 /* Main.storyboard in Resources */,
+				E510BFDD24F2B03600492DEE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +468,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SkillBoxTester/Pods-SkillBoxTester-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4181515F6D932B9C4E3FECAC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SkillBoxTester/Pods-SkillBoxTester-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SkillBoxTester/Pods-SkillBoxTester-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SkillBoxTester/Pods-SkillBoxTester-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8865C3B2CC1E581A0447241C /* [CP] Check Pods Manifest.lock */ = {
@@ -506,12 +531,13 @@
 				E5FEEE9524E5B5E0002D1D15 /* LogsCacher.swift in Sources */,
 				E5FEEEA524E5BBB8002D1D15 /* DiscountViewController.swift in Sources */,
 				E510BFD724F291AF00492DEE /* FormKeyboardBehavior.swift in Sources */,
+				E574764724F3F3ED00E8D207 /* ProductService.swift in Sources */,
 				E5FEEE9D24E5B73E002D1D15 /* Result.swift in Sources */,
 				E56C1F6424E5CACD00EA5816 /* UIImageView+SD.swift in Sources */,
 				E5FEEE7C24E5B21A002D1D15 /* MainTabBarController.swift in Sources */,
+				E510BFDF24F2B11600492DEE /* AuthService.swift in Sources */,
 				E5FEEE8724E5B479002D1D15 /* Profile.swift in Sources */,
 				E56C1F6624E5CFA100EA5816 /* UIView.swift in Sources */,
-				E5FEEE7024E5AF1E002D1D15 /* RegViewController.swift in Sources */,
 				E5FEEE7224E5AF3D002D1D15 /* AuthViewController.swift in Sources */,
 				E510BFD924F2973500492DEE /* ProductFlow.swift in Sources */,
 				E5FEEEA024E5B767002D1D15 /* UITableView.swift in Sources */,
@@ -702,7 +728,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.skillbox.TesterApp;
+				OTHER_LIBTOOLFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.anydog.t2m.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -722,7 +749,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.skillbox.TesterApp;
+				OTHER_LIBTOOLFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.anydog.t2m.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

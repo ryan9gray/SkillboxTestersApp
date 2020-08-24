@@ -12,10 +12,11 @@ pod 'ObjectMapper'
 pod 'SDWebImage'
 # UI
 pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
-pod 'PhoneNumberKit'
 
 pod 'SQLite.swift' # datastorage
-pod 'KeychainAccess' # save sensitive data to Keychain
+
+pod 'Firebase/Auth'
+pod 'GoogleSignIn'
 
 post_install do |installer|
     installer.pods_project.targets.each do |target|

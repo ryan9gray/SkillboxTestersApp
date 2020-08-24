@@ -18,20 +18,20 @@ final class Profile: Mappable  {
 		current != nil
 	}
 
-	var id: Int = 0
-	var isConfirmed: Bool?
-	var email: String?
-	var phone: String?
-	var avatar: String?
-	var name: String = ""
+	var id: String = ""
+    var profileId: String = ""
+    var token: String = ""
+
+	var email: String = ""
+	var phone: String = ""
+	var avatar: String = ""
 
 	required init?(map: Map) { }
 
 	func mapping(map: Map) {
-		id <- map["uid"]
-		email <- map["email"]
-		name <- map["first_name"]
-		phone <- map["phone"]
+		id <- map["userId"]
+        profileId <- map["profileId"]
+        token <- map["token"]
 	}
 
 	func save() {

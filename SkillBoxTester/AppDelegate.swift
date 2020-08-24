@@ -8,6 +8,8 @@
 
 import UIKit
 import SDWebImage
+import Firebase
+import GoogleSignIn
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         configureApp()
         window?.makeKeyAndVisible()
-
+        setuoGoogle()
         ApplicationFlow.shared.start()
         return true
     }
@@ -26,5 +28,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SDImageCache.shared.config.maxMemoryCost = 15 * 1024 * 1024
     }
 
+    func setuoGoogle() {
+        FirebaseApp.configure()
+
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+    }
+    
+    func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any])
+    -> Bool {
+        return GIDSignIn.sharedInstance().handle(url)
+    }
+
 }
+
 

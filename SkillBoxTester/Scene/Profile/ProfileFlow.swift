@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import Firebase
+import GoogleSignIn
 
 class ProfileFlow {
 
     let initialViewController: UINavigationController
+    let service = NetworkService.shared
 
     init() {
         let navigationController = UINavigationController()
@@ -27,6 +30,27 @@ class ProfileFlow {
     }
 
     private func createInitialViewController() -> UIViewController {
-        ProfileViewController.instantiate(fromStoryboard: .profile)
+        let controller = ProfileViewController.instantiate(fromStoryboard: .profile)
+        controller.output = .init(
+            logout: logout,
+            getAvatar: getProfile
+        )
+        return controller
+    }
+
+    func getProfile(complition: @escaping (String?) -> Void) {
+        service.getProfile(complition: complition)
+    }
+
+    func logout() {
+        Profile.current = nil
+        AppCacher.mappable.removeValue(of: Profile.self)
+        ViewHierarchyWorker.resetAppForAuthentication()
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
     }
 }

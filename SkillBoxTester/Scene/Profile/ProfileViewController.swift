@@ -14,12 +14,23 @@ class ProfileViewController: UIViewController {
     @IBOutlet var descriptionLabel: UILabel!
 
     @IBAction func logOutTap(_ sender: Any) {
+        output.logout()
     }
+
+    struct Output {
+        var logout: () -> Void
+        var getAvatar: (_ completion: @escaping (String?) -> Void) -> Void
+    }
+    var output: Output!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        imageView.setImageWithSD(from: Profile.current?.avatar ?? "")
+        output.getAvatar { [weak self] url in
+            guard let url = url, let self = self else { return }
+
+            self.imageView.setImageWithSD(from: url)
+        }
     }
 
 }

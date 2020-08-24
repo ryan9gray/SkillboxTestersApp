@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XfJ-Qr-h9b">
-                                <rect key="frame" x="16" y="104" width="382" height="220"/>
+                                <rect key="frame" x="16" y="104" width="382" height="278"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Itm-lJ-GON">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="48"/>
@@ -52,7 +52,7 @@
                                             <action selector="loginTap:" destination="XaL-jB-EsW" eventType="touchUpInside" id="I5i-an-q2c"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKu-YT-QhY">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKu-YT-QhY" customClass="DesignableButton" customModule="Spring">
                                         <rect key="frame" x="0.0" y="170" width="382" height="50"/>
                                         <color key="backgroundColor" red="0.8862745098" green="0.2901960784" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -68,6 +68,15 @@
                                         <connections>
                                             <action selector="registrateTap:" destination="XaL-jB-EsW" eventType="touchUpInside" id="IwI-X4-BMo"/>
                                         </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Top-nK-UaV" customClass="GIDSignInButton">
+                                        <rect key="frame" x="0.0" y="228" width="382" height="50"/>
+                                        <color key="backgroundColor" red="0.8862745098" green="0.2901960784" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Ck8-2S-DNP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="Google"/>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -85,6 +94,7 @@
                         <outlet property="loginTextfield" destination="Itm-lJ-GON" id="4Yl-gb-odH"/>
                         <outlet property="passwordTextfield" destination="UZJ-qQ-qpb" id="Syt-L1-QJb"/>
                         <outlet property="registrateBUtton" destination="RKu-YT-QhY" id="9od-Tl-mHC"/>
+                        <outlet property="signInButton" destination="Top-nK-UaV" id="4ut-bp-hnJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Tq-xg-AcF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

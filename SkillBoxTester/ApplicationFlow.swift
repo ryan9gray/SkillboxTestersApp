@@ -23,12 +23,12 @@ class ApplicationFlow {
         basketFlow.start()
         discountFlow.start()
 
-		startMain()
-//		if Profile.isAuthorized {
-//			startMain()
-//		} else {
-//			ViewHierarchyWorker.resetAppForAuthentication()
-//		}
+		//startMain()
+		if Profile.isAuthorized {
+			startMain()
+		} else {
+			ViewHierarchyWorker.resetAppForAuthentication()
+		}
 	}
 
 	func startMain() {

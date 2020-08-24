@@ -10,7 +10,7 @@ import UIKit
 
 class ProductFlow {
     let service = NetworkService.shared
-
+    let productService = ProductService()
     private weak var fromViewController: UIViewController?
 
 

@@ -16,6 +16,7 @@ final class Product: Mappable, Hashable {
 	var size: Size?
 	var info: String = ""
     var id: String = ""
+    var performance: Bool = false
 
     required init?(map: Map) {}
 
@@ -27,7 +28,9 @@ final class Product: Mappable, Hashable {
 		size       <- map["size"]
 		info       <- map["info"]
         id       <- map["_id"]
+        performance       <- map["performance"]
     }
+
     static func == (lhs: Product, rhs: Product) -> Bool {
         lhs.id == rhs.id
     }

@@ -20,7 +20,8 @@ class NetworkService {
     func getProducts(complition: @escaping ([Product]) -> Void) {
 		AF.request(NetworkService.baseUrl + "api/v1/products/").responseJSON { response in
             debugPrint(response)
-			let json = JSON(response.data)["info"]["products"]
+            guard let data = response.data else { return complition([]) }
+			let json = JSON(data)["info"]["products"]
 			let products = Mapper<Product>().mapArray(JSONString: json.description) ?? []
             complition(products)
         }
@@ -29,26 +30,27 @@ class NetworkService {
     func getComments(id: String, complition: @escaping ([Comment]) -> Void) {
         AF.request(NetworkService.baseUrl + "api/v1/products/\(id)/comments").responseJSON { response in
             debugPrint(response)
-            let json = JSON(response.data)["info"]["comments"]
+            guard let data = response.data else { return complition([]) }
+            let json = JSON(data)["info"]["comments"]
             let comment = Mapper<Comment>().mapArray(JSONString: json.description) ?? []
             complition(comment)
         }
     }
 
+    func getProfile(complition: @escaping (String?) -> Void) {
+        guard let id = Profile.current?.profileId else { return }
 
-    func defineOriginalLanguage(ofText: String) {
-        let text =  ofText
-		let stringURL = NetworkService.baseUrl + "api/v1/products/"
-        let url = URL(string: stringURL)
+        AF.request(NetworkService.baseUrl + "api/v1/profile/\(id)").responseJSON { response in
+            debugPrint(response)
+            guard
+                let data = response.data,
+                let avatar = JSON(data)["info"]["avatar"].string
+            else { return complition(nil) }
 
-        var request = URLRequest(url: url!)
-        request.httpMethod = HTTPMethod.post.rawValue
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpBody = text.data(using: .utf8)
-
-        AF.request(request)
-            .responseJSON { response in
-                print(response)
+            Profile.current?.avatar = avatar
+            complition(avatar)
         }
     }
+
+
 }
