@@ -61,6 +61,8 @@ class AuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        loginTextfield.delegate = self
+        passwordTextfield.delegate = self
         setuoGoogle()
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance().signIn()
@@ -68,10 +70,9 @@ class AuthViewController: UIViewController {
 
     // MARK: Actions
     func setuoGoogle() {
-       
         GIDSignIn.sharedInstance().delegate = self
     }
-
+    private let ulegalSet = CharacterSet(charactersIn: "^|?\"")
 }
 
 extension AuthViewController: GIDSignInDelegate {
@@ -95,4 +96,20 @@ extension AuthViewController: GIDSignInDelegate {
     }
 
 
+}
+extension AuthViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let subString = (textField.text!.capitalized as NSString).replacingCharacters(in: range, with: string)
+        if subString.contains(from: ulegalSet) {
+            fatalError("Bug unlegalSet")
+        }
+        return true
+    }
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        true
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }

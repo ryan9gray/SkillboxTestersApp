@@ -24,6 +24,8 @@
 		E56C1F6424E5CACD00EA5816 /* UIImageView+SD.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56C1F6224E5CACD00EA5816 /* UIImageView+SD.swift */; };
 		E56C1F6624E5CFA100EA5816 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56C1F6524E5CFA100EA5816 /* UIView.swift */; };
 		E574764724F3F3ED00E8D207 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574764624F3F3ED00E8D207 /* ProductService.swift */; };
+		E574764924F4365700E8D207 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574764824F4365700E8D207 /* NetworkManager.swift */; };
+		E574764B24F4370F00E8D207 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574764A24F4370F00E8D207 /* UIWindow.swift */; };
 		E5F657CD24F127CB0058F549 /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F657CC24F127CB0058F549 /* Basket.swift */; };
 		E5F657D024F131CA0058F549 /* BusketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F657CE24F131CA0058F549 /* BusketTableViewCell.swift */; };
 		E5F657D124F131CA0058F549 /* BusketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5F657CF24F131CA0058F549 /* BusketTableViewCell.xib */; };
@@ -91,6 +93,8 @@
 		E56C1F6224E5CACD00EA5816 /* UIImageView+SD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+SD.swift"; sourceTree = "<group>"; };
 		E56C1F6524E5CFA100EA5816 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		E574764624F3F3ED00E8D207 /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
+		E574764824F4365700E8D207 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E574764A24F4370F00E8D207 /* UIWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
 		E5F657CC24F127CB0058F549 /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
 		E5F657CE24F131CA0058F549 /* BusketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusketTableViewCell.swift; sourceTree = "<group>"; };
 		E5F657CF24F131CA0058F549 /* BusketTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusketTableViewCell.xib; sourceTree = "<group>"; };
@@ -273,6 +277,7 @@
 		E5FEEE7324E5AFDA002D1D15 /* Workers */ = {
 			isa = PBXGroup;
 			children = (
+				E574764824F4365700E8D207 /* NetworkManager.swift */,
 				E510BFDA24F29AED00492DEE /* LocalStore.swift */,
 				E510BFD624F291AF00492DEE /* FormKeyboardBehavior.swift */,
 				E5FEEE7F24E5B28C002D1D15 /* Style.swift */,
@@ -284,6 +289,7 @@
 		E5FEEE7824E5B108002D1D15 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E574764A24F4370F00E8D207 /* UIWindow.swift */,
 				E5F657D424F139900058F549 /* Int.swift */,
 				E56C1F6124E5CACC00EA5816 /* UIImage.swift */,
 				E56C1F6224E5CACD00EA5816 /* UIImageView+SD.swift */,
@@ -552,11 +558,13 @@
 				E5FEEE8424E5B41A002D1D15 /* ProfileViewController.swift in Sources */,
 				E5F657D024F131CA0058F549 /* BusketTableViewCell.swift in Sources */,
 				E5F657DD24F15D0F0058F549 /* CommentTableViewCell.swift in Sources */,
+				E574764924F4365700E8D207 /* NetworkManager.swift in Sources */,
 				E5FEEEB524E5C027002D1D15 /* ProfileFlow.swift in Sources */,
 				E5FEEE8224E5B403002D1D15 /* FeedViewController.swift in Sources */,
 				E5F657DA24F1498E0058F549 /* NetworkService.swift in Sources */,
 				E5FEEE8024E5B28C002D1D15 /* Style.swift in Sources */,
 				E510BFDB24F29AED00492DEE /* LocalStore.swift in Sources */,
+				E574764B24F4370F00E8D207 /* UIWindow.swift in Sources */,
 				E5FEEE9724E5B5E0002D1D15 /* SqliteCacher+ExirableCacherType.swift in Sources */,
 				E5FEEEB724E5C039002D1D15 /* BasketFlow.swift in Sources */,
 				E5FEEEA124E5B767002D1D15 /* UITableViewCell.swift in Sources */,

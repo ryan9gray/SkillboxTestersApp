@@ -58,4 +58,15 @@ class ApplicationFlow {
 		self.tabBarController = tabBarController
         return tabBarController
     }
+
+    func showAlert(_ text: String) {
+        let alertController = UIAlertController(
+            title: text,
+            message: nil,
+            preferredStyle: .alert
+        )
+        let cancelAction = UIAlertAction(title: "ok".localized, style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        UIApplication.topViewController()?.present(alertController, animated: true, completion: nil)
+    }
 }
