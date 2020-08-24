@@ -41,8 +41,8 @@ struct ProductService {
         internal init(productId: String, text: String) {
             self.productId = productId
             self.text = text
-            self.userName = ""
-            self.userId = "userId"
+            self.userName = "Anonymus"
+            self.userId = Profile.current?.id ?? ""
         }
 
         let productId: String

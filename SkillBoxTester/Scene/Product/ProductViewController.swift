@@ -34,13 +34,17 @@ class ProductViewController: UIViewController {
     var input: Input!
 
     struct Output {
-        var sendComment: (String) -> Void
+        var sendComment: (String, _ completion: @escaping (Bool) -> Void) -> Void
         var addToCart: (Product) -> Void
     }
     var output: Output!
 
     @IBAction func sendCommentTap(_ sender: Any) {
-        output.sendComment(commentTextView.text)
+        output.sendComment(commentTextView.text) { [weak self] finish in
+            if finish {
+                self?.fetchComments()
+            }
+        }
         commentTextView.text = ""
     }
     @IBAction func addToCartTap(_ sender: Any) {
@@ -54,8 +58,12 @@ class ProductViewController: UIViewController {
 
         setup()
         setupProduct(input.item)
+        fetchComments()
+    }
+
+    func fetchComments() {
         input.getComments { [weak self] comments in
-            self?.comments = comments
+            self?.comments = comments.reversed()
         }
     }
 

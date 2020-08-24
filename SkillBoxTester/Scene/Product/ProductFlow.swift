@@ -28,8 +28,8 @@ class ProductFlow {
             }
         )
         controller.output = .init(
-            sendComment: { text in
-
+            sendComment: { text, completion in
+                self.sendComment(text, for: product, completion: completion)
             },
             addToCart: { product in
                 if Basket.current?.inBusket(product) ?? false {
@@ -42,8 +42,8 @@ class ProductFlow {
         fromViewController?.navigationController?.pushViewController(controller, animated: true)
     }
 
-    func sendComment(_ text: String) {
-
+    func sendComment(_ text: String, for product: Product, completion: @escaping (Bool) -> Void) {
+        productService.sendComment(params: .init(productId: product.id, text: text), completion: completion)
     }
 
     func fetchComments(id: String, complition: @escaping ([Comment]) -> Void) {
