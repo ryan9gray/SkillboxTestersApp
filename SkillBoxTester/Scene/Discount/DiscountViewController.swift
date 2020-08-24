@@ -8,15 +8,20 @@
 
 import UIKit
 
-class DiscountViewController: UIViewController {
+class DiscountViewController: FeedViewController {
 
-    @IBOutlet internal var tableView: UITableView!
-    var items: [Product] = []
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setup()
+    }
+
+    override func fetchItems() {
+        input.getItems { [weak self] products in
+            let item = products.filter { $0.performance.boolValue }
+            self?.items = item
+        }
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -24,29 +29,5 @@ class DiscountViewController: UIViewController {
 
     }
 
-    func setup() {
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(cells: [ProductTableViewCell.self])
-		let tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0.5))
-		tableFooterView.backgroundColor = .clear
-		tableView.tableFooterView = tableFooterView
-    }
-}
 
-extension DiscountViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        items.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withCell: ProductTableViewCell.self, for: indexPath)
-        let item = items[indexPath.row]
-        cell.set(
-            title: item.title <~ Style.TextAttributes.regular,
-            subtitle: item.price <~ Style.TextAttributes.regular,
-            imageUrl: item.imageUrl
-        )
-        return cell
-    }
 }

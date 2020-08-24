@@ -27,10 +27,6 @@ class FeedFlow {
         )
     }
 
-    func sendComment(_ text: String) {
-
-    }
-
     private func createInitialViewController() -> UIViewController {
         let feed = FeedViewController.instantiate(fromStoryboard: .feed)
         feed.input = .init(getItems: fetchProducts)

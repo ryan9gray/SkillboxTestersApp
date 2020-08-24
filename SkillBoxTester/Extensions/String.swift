@@ -6,6 +6,10 @@ extension String {
         NSLocalizedString(self, comment: "")
     }
 
+    var boolValue: Bool {
+        self == "true"
+    }
+
     var appointmentDateString: Date? {
         let dateFormat = "dd.MM.yyyy"
         return date(withFormat: dateFormat)

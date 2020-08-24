@@ -10,6 +10,7 @@ import UIKit
 
 class DiscountFlow {
     let initialViewController: UINavigationController
+    let service = NetworkService.shared
 
     init() {
         let navigationController = UINavigationController()
@@ -26,6 +27,20 @@ class DiscountFlow {
     }
 
     private func createInitialViewController() -> UIViewController {
-        DiscountViewController.instantiate(fromStoryboard: .discount)
+        let feed = DiscountViewController.instantiate(fromStoryboard: .discount)
+        feed.input = .init(getItems: fetchProducts)
+        feed.output = .init(
+            priductTap: { [weak feed] product in
+                guard let from = feed else { return }
+
+                let flow = ProductFlow()
+                flow.start(from: from, with: product)
+            }
+        )
+        return feed
+    }
+
+    func fetchProducts(complition: @escaping ([Product]) -> Void) {
+        service.getProducts(complition: complition)
     }
 }

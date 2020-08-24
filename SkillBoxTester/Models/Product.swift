@@ -16,7 +16,7 @@ final class Product: Mappable, Hashable {
 	var size: Size?
 	var info: String = ""
     var id: String = ""
-    var performance: Bool = false
+    var performance: String = ""
 
     required init?(map: Map) {}
 

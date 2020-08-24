@@ -30,6 +30,10 @@ class FeedViewController: UIViewController {
         super.viewDidLoad()
 
         setup()
+        fetchItems()
+    }
+
+    func fetchItems() {
         input.getItems { [weak self] products in
             self?.items = products
         }
