@@ -10,6 +10,10 @@ extension String {
         self == "true"
     }
 
+    var doubleValue: Double? {
+        Double(self)
+    }
+
     var appointmentDateString: Date? {
         let dateFormat = "dd.MM.yyyy"
         return date(withFormat: dateFormat)

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ObjectMapper
 
 class BasketViewController: UIViewController {
 
@@ -33,11 +34,9 @@ class BasketViewController: UIViewController {
 
     func calculate() {
         guard let products = Basket.current?.products else { return }
-        items = Array(products.keys)
+        items = products.map { $0.product! }
 
-        count = items.reduce(0.0, {
-            $0 + Double($1.price)! * Double((products[$1] ?? 1))
-        })
+        count = Basket.current!.cost()
         totalCostLabel.text = count.stringValue
     }
 

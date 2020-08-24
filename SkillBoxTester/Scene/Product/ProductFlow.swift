@@ -33,7 +33,7 @@ class ProductFlow {
             },
             addToCart: { product in
                 if Basket.current?.inBusket(product) ?? false {
-                    Basket.current?.products[product] = nil
+                    Basket.current?.remove(product)
                 } else {
                     Basket.current?.addToCart(product)
                 }

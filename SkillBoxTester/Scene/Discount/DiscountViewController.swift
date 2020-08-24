@@ -10,8 +10,6 @@ import UIKit
 
 class DiscountViewController: FeedViewController {
 
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,6 +26,4 @@ class DiscountViewController: FeedViewController {
         super.viewDidAppear(animated)
 
     }
-
-
 }
