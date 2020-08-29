@@ -34,7 +34,10 @@ class ProfileFlow {
         controller.output = .init(
             logout: logout,
             getAvatar: getProfile,
-            upload: uploadImage
+            upload: uploadImage,
+            infoOpen: { [weak controller] in
+                self.openInfo(from: controller)
+            }
         )
         return controller
     }
@@ -61,5 +64,11 @@ class ProfileFlow {
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
         }
+    }
+
+    func openInfo(from: UIViewController?) {
+        let controller = InfoViewController.instantiate(fromStoryboard: .profile)
+        controller.output = .init(getAvatar: getProfile, upload: uploadImage)
+        from?.navigationController?.pushViewController(controller, animated: true)
     }
 }

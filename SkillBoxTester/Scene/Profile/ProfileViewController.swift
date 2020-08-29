@@ -20,13 +20,14 @@ class ProfileViewController: UIViewController {
         output.logout()
     }
     @IBAction func editAvatarTap(_ sender: Any) {
-        libCamOpen()
+        output.infoOpen()
     }
     
     struct Output {
         var logout: () -> Void
         var getAvatar: (_ completion: @escaping (String?) -> Void) -> Void
         var upload: (UIImage?) -> Void
+        var infoOpen: () -> Void
     }
     var output: Output!
 
@@ -43,27 +44,34 @@ class ProfileViewController: UIViewController {
         avatarXConstraint.constant = view.bounds.width / 2 - 60
     }
 
-    func libCamOpen() {
-        let picker = UIImagePickerController()
-        picker.delegate = self
-        picker.sourceType = .photoLibrary
-        present(picker, animated: true, completion: nil)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        self.nameLabel.text = Profile.current?.username
+        self.aboutLabel.text = Profile.current?.about
     }
 
-    func imageGet(_ image: UIImage) {
-        output.upload(image)
-        imageView.image = image
-    }
+//    func libCamOpen() {
+//        let picker = UIImagePickerController()
+//        picker.delegate = self
+//        picker.sourceType = .photoLibrary
+//        present(picker, animated: true, completion: nil)
+//    }
+//
+//    func imageGet(_ image: UIImage) {
+//        output.upload(image)
+//        imageView.image = image
+//    }
 }
 
-extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let image = info[.originalImage] as! UIImage
-        imageGet(image)
-        picker.dismiss(animated: true, completion: nil)
-    }
-
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true)
-    }
-}
+//extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+//        let image = info[.originalImage] as! UIImage
+//        imageGet(image)
+//        picker.dismiss(animated: true, completion: nil)
+//    }
+//
+//    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+//        picker.dismiss(animated: true)
+//    }
+//}

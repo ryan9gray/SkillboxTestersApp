@@ -15,6 +15,7 @@ pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
 
 pod 'SQLite.swift' # datastorage
 
+pod 'Firebase/AppDistribution'
 pod 'Firebase/Auth'
 pod 'GoogleSignIn'
 
