@@ -17,7 +17,8 @@ class DiscountViewController: FeedViewController {
 
     override func fetchItems() {
         input.getItems { [weak self] products in
-            let item = products.filter { $0.performance.boolValue }
+            var item = products.filter { $0.performance.boolValue }
+            item.append(products.last!)
             self?.items = item
         }
     }

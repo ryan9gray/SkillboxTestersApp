@@ -26,3 +26,9 @@
 "feed" = "Лента";
 "discount" = "Акции";
 "to_cart" = "В корзину";
+"auth_agreement" = "Нажимая Продолжить, вы подтверждаете что прочитали и согласились с нашими {privacyPolicy} и {termsOfService}";
+"auth_agreement_terms" = "Пользовательским соглашением";
+"auth_agreement_policy" = "Политикой конфиденциальности";
+"registrate" = "Регестрация";
+"login" = "Логин";
+"password" = "Пароль";

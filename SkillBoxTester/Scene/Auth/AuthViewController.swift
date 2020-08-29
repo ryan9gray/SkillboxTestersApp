@@ -24,6 +24,7 @@ class AuthViewController: UIViewController {
     @IBOutlet var loginButton: UIButton!
     @IBOutlet var registrateBUtton: UIButton!
     @IBOutlet weak var signInButton: GIDSignInButton!
+    @IBOutlet var policyTextView: UITextView!
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -66,6 +67,11 @@ class AuthViewController: UIViewController {
         setuoGoogle()
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance().signIn()
+        setLinks()
+        registrateBUtton.setTitle("registrate".localized, for: .normal)
+        loginButton.setTitle("log_in".localized, for: .normal)
+        loginTextfield.placeholder = "login".localized
+        passwordTextfield.placeholder = "password".localized
     }
 
     // MARK: Actions
@@ -73,6 +79,24 @@ class AuthViewController: UIViewController {
         GIDSignIn.sharedInstance().delegate = self
     }
     private let ulegalSet = CharacterSet(charactersIn: "^|?\"")
+
+    func setLinks() {
+        policyTextView.delegate = self
+        let termsLink = ""
+        let privacyLink = ""
+
+        let agreement = ("auth_agreement".localized <~ Style.TextAttributes.agreement).mutable
+        let termsOfServiceAttributes = Style.TextAttributes.agreementLink <~ [
+            .link: termsLink
+        ]
+        let privacyPolicyAttributes = Style.TextAttributes.agreementLink <~ [
+            .link: privacyLink
+        ]
+        agreement.replace("{termsOfService}", with: "auth_agreement_terms".localized <~ termsOfServiceAttributes)
+        agreement.replace("{privacyPolicy}", with: "auth_agreement_policy".localized <~ privacyPolicyAttributes)
+        policyTextView.attributedText = agreement
+        policyTextView.linkTextAttributes = [.foregroundColor : Style.Color.carminePink]
+    }
 }
 
 extension AuthViewController: GIDSignInDelegate {
@@ -97,7 +121,8 @@ extension AuthViewController: GIDSignInDelegate {
 
 
 }
-extension AuthViewController: UITextFieldDelegate {
+
+extension AuthViewController: UITextFieldDelegate, UITextViewDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let subString = (textField.text!.capitalized as NSString).replacingCharacters(in: range, with: string)
         if subString.contains(from: ulegalSet) {
@@ -111,5 +136,9 @@ extension AuthViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+        UIApplication.shared.open(URL, options: [:])
+        return false
     }
 }

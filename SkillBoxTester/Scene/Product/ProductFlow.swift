@@ -29,6 +29,7 @@ class ProductFlow {
         )
         controller.output = .init(
             sendComment: { text, completion in
+                guard text.count < 64 else { return }
                 self.sendComment(text, for: product, completion: completion)
             },
             addToCart: { product in

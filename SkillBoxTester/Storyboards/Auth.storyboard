@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XfJ-Qr-h9b">
-                                <rect key="frame" x="16" y="104" width="382" height="278"/>
+                                <rect key="frame" x="16" y="104" width="382" height="335.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Itm-lJ-GON">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="48"/>
@@ -78,6 +78,14 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Google"/>
                                     </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" scrollEnabled="NO" contentInsetAdjustmentBehavior="never" delaysContentTouches="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNn-pW-VhM">
+                                        <rect key="frame" x="0.0" y="286" width="382" height="49.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">By signing up, you agree to the Terms of Service
+and Privacy Policy</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -93,6 +101,7 @@
                         <outlet property="loginButton" destination="GNy-oi-YP0" id="Hyf-6o-fTM"/>
                         <outlet property="loginTextfield" destination="Itm-lJ-GON" id="4Yl-gb-odH"/>
                         <outlet property="passwordTextfield" destination="UZJ-qQ-qpb" id="Syt-L1-QJb"/>
+                        <outlet property="policyTextView" destination="pNn-pW-VhM" id="t2u-FG-DzY"/>
                         <outlet property="registrateBUtton" destination="RKu-YT-QhY" id="9od-Tl-mHC"/>
                         <outlet property="signInButton" destination="Top-nK-UaV" id="4ut-bp-hnJ"/>
                     </connections>

@@ -49,7 +49,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     @objc func rotated() {
         if UIDevice.current.orientation.isLandscape {
             print("Landscape")
-            fatalError("Bug rotation")
+            if UIApplication.topViewController() is ProductViewController {
+                fatalError("Bug rotation")
+            }
         }
 
         if UIDevice.current.orientation.isPortrait {
@@ -58,7 +60,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
-        //fatalError()
+        if UIApplication.topViewController() is DiscountViewController {
+            fatalError()
+        }
     }
 }
 

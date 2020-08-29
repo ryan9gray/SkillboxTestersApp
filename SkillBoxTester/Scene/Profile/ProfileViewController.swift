@@ -11,15 +11,22 @@ import UIKit
 class ProfileViewController: UIViewController {
 
     @IBOutlet var imageView: UIImageView!
-    @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var avatarXConstraint: NSLayoutConstraint!
+
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var aboutLabel: UILabel!
 
     @IBAction func logOutTap(_ sender: Any) {
         output.logout()
     }
-
+    @IBAction func editAvatarTap(_ sender: Any) {
+        libCamOpen()
+    }
+    
     struct Output {
         var logout: () -> Void
         var getAvatar: (_ completion: @escaping (String?) -> Void) -> Void
+        var upload: (UIImage?) -> Void
     }
     var output: Output!
 
@@ -29,9 +36,13 @@ class ProfileViewController: UIViewController {
         output.getAvatar { [weak self] url in
             guard let url = url, let self = self else { return }
 
-            self.imageView.setImageWithSD(from: url)
+            self.imageView.setAvatarWithSD(from: url)
+            self.nameLabel.text = Profile.current?.username
+            self.aboutLabel.text = Profile.current?.about
         }
+        avatarXConstraint.constant = view.bounds.width / 2 - 60
     }
+
     func libCamOpen() {
         let picker = UIImagePickerController()
         picker.delegate = self
@@ -40,7 +51,8 @@ class ProfileViewController: UIViewController {
     }
 
     func imageGet(_ image: UIImage) {
-
+        output.upload(image)
+        imageView.image = image
     }
 }
 

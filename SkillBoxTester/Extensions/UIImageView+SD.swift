@@ -27,4 +27,22 @@ extension UIImageView {
             self.image = image
         }
 	}
+
+    func setAvatarWithSD(
+        from string: String,
+        placeholder: UIImage? = .from(color: Style.Color.lightGray)
+    ) {
+        image = .from(color: Style.Color.lightGray)
+        guard let url = URL(string: string) else { return }
+
+        sd_setImage(
+            with: url,
+            placeholderImage: placeholder,
+            options: [.scaleDownLargeImages]
+        ) { [weak self] image, error, cacheType, _ in
+            guard let self = self else { return }
+
+            self.image = image
+        }
+    }
 }

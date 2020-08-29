@@ -42,8 +42,8 @@ struct AuthService {
     }
 
     enum Endpoint: String {
-        case login
-        case signup
+        case login = "login"
+        case signup = "signup"
     }
 
     enum AuthType: String {

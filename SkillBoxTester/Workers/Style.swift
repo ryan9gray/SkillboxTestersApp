@@ -46,7 +46,14 @@ enum Style {
 			.font: Style.Font.semibold(size: 17),
 			.foregroundColor: Style.Color.black
 		]
-
+        static let agreementLink: [NSAttributedString.Key: Any] = [
+            .font: Style.Font.main(size: 12),
+            .foregroundColor: Style.Color.carminePink
+        ]
+        static let agreement: [NSAttributedString.Key: Any] = [
+            .font: Style.Font.main(size: 12),
+            .foregroundColor: Style.Color.gray
+        ]
         static func fontPicker(font: UIFont) -> [NSAttributedString.Key: Any] {
             [
                 .font: font.withSize(18),
@@ -130,4 +137,24 @@ public func <> <A>(f: @escaping (inout A) -> Void, g: @escaping (inout A) -> Voi
     f(&a)
     g(&a)
   }
+}
+extension NSAttributedString {
+    var mutable: NSMutableAttributedString { NSMutableAttributedString(attributedString: self) }
+}
+
+extension NSMutableAttributedString {
+    /// Replaces string with specified attributed string.
+    func replace(_ string: String, with attributedString: NSAttributedString) {
+        let range = (self.string as NSString).range(of: string)
+
+        guard range.location != NSNotFound else {
+            let exclamation = "\u{203C}\u{FE0F}"
+            let alarm = "\(exclamation) \(string) is absent \(exclamation)"
+            let attributedAlarm = NSAttributedString(string: alarm, attributes: [ .foregroundColor: Style.Color.carminePink ])
+            insert(attributedAlarm, at: 0)
+            return
+        }
+
+        replaceCharacters(in: range, with: attributedString)
+    }
 }

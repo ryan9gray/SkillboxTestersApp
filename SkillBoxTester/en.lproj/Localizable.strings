@@ -26,3 +26,9 @@
 "feed" = "Feed";
 "discount" = "Discount";
 "to_cart" = "To Cart";
+"auth_agreement" = "By tapping on Continue, you confirm that you have read, understood, and agreed to our {termsOfService} and {privacyPolicy}";
+"auth_agreement_terms" = "Terms and conditions";
+"auth_agreement_policy" = "Privacy policy";
+"registrate" = "Regestrate";
+"login" = "Login";
+"password" = "Password";

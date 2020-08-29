@@ -47,6 +47,8 @@ class NetworkService {
                 let avatar = JSON(data)["info"]["avatar"].string
             else { return complition(nil) }
 
+            Profile.current?.username = JSON(data)["info"]["username"].string ?? ""
+            Profile.current?.about = JSON(data)["info"]["about"].string ?? ""
             Profile.current?.avatar = avatar
             complition(avatar)
         }
@@ -56,4 +58,35 @@ class NetworkService {
 
     }
 
+    func upload(
+        image: UIImage?,
+        completion: @escaping (Result<Void>) -> Void,
+        onProgress: @escaping (Double) -> Void
+    ) {
+        guard
+            let id = Profile.current?.profileId
+        else { return }
+
+        AF.upload(
+            multipartFormData: { multipartFormData in
+                if let jpegData = image?.resizeWith()?.jpegData(compressionQuality: 1.0) {
+                    multipartFormData.append(Data(jpegData), withName: "avatar_\(id)")
+                }
+            },
+            to: NetworkService.baseUrl + "api/v1/profile/\(id)",
+            method: .post,
+            requestModifier: { request in
+                let body = try? JSONEncoder().encode(ProfileResponse(username: "r9g", about: "U know who i am"))
+                request.httpBody = body
+            }
+        ).responseJSON { response in
+            debugPrint(response)
+
+        }
+    }
+
+    struct ProfileResponse: Codable {
+        let username: String?
+        let about: String?
+    }
 }

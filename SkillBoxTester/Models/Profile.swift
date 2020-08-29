@@ -25,6 +25,8 @@ final class Profile: Mappable  {
 	var email: String = ""
 	var phone: String = ""
 	var avatar: String = ""
+    var about: String = ""
+    var username: String = ""
 
 	required init?(map: Map) { }
 
@@ -32,6 +34,8 @@ final class Profile: Mappable  {
 		id <- map["userId"]
         profileId <- map["profileId"]
         token <- map["token"]
+        about <- map["about"]
+        username <- map["username"]
 	}
 
 	func save() {

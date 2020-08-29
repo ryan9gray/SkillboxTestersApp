@@ -33,9 +33,18 @@ class ProfileFlow {
         let controller = ProfileViewController.instantiate(fromStoryboard: .profile)
         controller.output = .init(
             logout: logout,
-            getAvatar: getProfile
+            getAvatar: getProfile,
+            upload: uploadImage
         )
         return controller
+    }
+
+    func uploadImage(_ image: UIImage?) {
+        service.upload(image: image, completion: { result in
+            
+        }) { count in
+            print(count)
+        }
     }
 
     func getProfile(complition: @escaping (String?) -> Void) {
