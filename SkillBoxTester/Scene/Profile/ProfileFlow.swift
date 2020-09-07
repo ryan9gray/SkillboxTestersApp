@@ -34,10 +34,10 @@ class ProfileFlow {
         controller.output = .init(
             logout: logout,
             getAvatar: getProfile,
-            upload: uploadImage,
-            infoOpen: { [weak controller] in
-                self.openInfo(from: controller)
-            }
+            upload: uploadImage
+//            infoOpen: { [weak controller] in
+//                self.openInfo(from: controller)
+//            }
         )
         return controller
     }

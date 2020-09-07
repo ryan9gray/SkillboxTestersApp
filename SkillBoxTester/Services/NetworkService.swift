@@ -70,7 +70,7 @@ class NetworkService {
         AF.upload(
             multipartFormData: { multipartFormData in
                 if let jpegData = image?.resizeWith()?.jpegData(compressionQuality: 1.0) {
-                    multipartFormData.append(Data(jpegData), withName: "avatar_\(id)")
+                    multipartFormData.append(Data(jpegData), withName: "avatar", fileName: "form-data", mimeType: "image/png")
                 }
             },
             to: NetworkService.baseUrl + "api/v1/profile/\(id)",

@@ -374,8 +374,8 @@
 			isa = PBXGroup;
 			children = (
 				E5FEEE8324E5B41A002D1D15 /* ProfileViewController.swift */,
-				E5FEEEB424E5C027002D1D15 /* ProfileFlow.swift */,
 				E5C9B08B24FA875300ED10D6 /* InfoViewController.swift */,
+				E5FEEEB424E5C027002D1D15 /* ProfileFlow.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
