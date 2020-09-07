@@ -43,7 +43,7 @@ struct AuthService {
 
     enum Endpoint: String {
         case login = "login"
-        case signup = "signup"
+        case signup = "register"
     }
 
     enum AuthType: String {
@@ -60,8 +60,6 @@ struct AuthService {
         let type: String
         let creds: Cred
         let deviceId: String = UIDevice.current.identifierForVendor?.uuidString ?? ""
-
-
     }
     struct Cred: Encodable {
         let gtoken: String

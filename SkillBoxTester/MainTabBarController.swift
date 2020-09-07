@@ -16,6 +16,7 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
         let appearance = UITabBarItem.appearance()
         appearance.setTitleTextAttributes(Style.TextAttributes.regular, for: .normal)
         appearance.setTitleTextAttributes(Style.TextAttributes.tabSelected, for: .selected)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -24,8 +25,9 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
     }
     
     func setupTabBar() {
-        tabBar.tintColor = Style.Color.carminePink
-        tabBar.backgroundImage = UIImage()
+        tabBar.barTintColor = Style.TextAttributes.backColor
+        //tabBar.backgroundImage = UIImage()
+        tabBar.backgroundColor = Style.TextAttributes.backColor
         tabBar.shadowImage = UIImage()
         tabBar.layer.shadowColor = UIColor.black.cgColor
         tabBar.layer.shadowOffset = CGSize(width: 0, height: -5)

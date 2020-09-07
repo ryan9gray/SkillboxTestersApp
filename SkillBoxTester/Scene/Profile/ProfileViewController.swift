@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MobileCoreServices
 
 class ProfileViewController: UIViewController {
 
@@ -20,9 +21,11 @@ class ProfileViewController: UIViewController {
         output.logout()
     }
     @IBAction func editAvatarTap(_ sender: Any) {
-        libCamOpen()
+        libOpen()
     }
-    
+    @IBAction func camTap(_ sender: Any) {
+        сamOpen()
+    }
     struct Output {
         var logout: () -> Void
         var getAvatar: (_ completion: @escaping (String?) -> Void) -> Void
@@ -56,10 +59,18 @@ class ProfileViewController: UIViewController {
         }
     }
 
-    func libCamOpen() {
+    func libOpen() {
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.sourceType = .photoLibrary
+        picker.mediaTypes = [String(kUTTypeImage), String(kUTTypeMovie)]
+        present(picker, animated: true, completion: nil)
+    }
+
+    func сamOpen() {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = .camera
         present(picker, animated: true, completion: nil)
     }
 

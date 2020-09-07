@@ -48,10 +48,11 @@ class AuthFlow {
                 type: AuthService.AuthType.email.rawValue,
                 creds: AuthService.Cred(gtoken: "", login: login, password: pass)
             )
-        ){ profile in
-            if profile != nil {
-                ApplicationFlow.shared.startMain()
-            }
+        ){ [weak self] profile in
+            self?.login(login: login, pass: pass)
+//            if profile != nil {
+//                ApplicationFlow.shared.startMain()
+//            }
         }
     }
     func login(login: String, pass: String) {

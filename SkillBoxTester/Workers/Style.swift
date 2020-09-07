@@ -26,13 +26,28 @@ enum Style {
     }
 
     enum TextAttributes {
+        static var textColor: UIColor {
+            if #available(iOS 13.0, *) {
+                return UIColor.label
+            } else {
+                return Style.Color.black
+            }
+        }
+        static var backColor: UIColor {
+            if #available(iOS 13.0, *) {
+                return UIColor.systemBackground
+            } else {
+                return UIColor.white
+            }
+        }
+
         static let subheadSemibold: [NSAttributedString.Key: Any] = [
             .font: Style.Font.semibold(size: 14),
             .foregroundColor: Style.Color.black
         ]
 		static let regular: [NSAttributedString.Key: Any] = [
 			.font: Style.Font.main(size: 15),
-			.foregroundColor: Style.Color.black
+            .foregroundColor: TextAttributes.textColor
 		]
         static let tabSelected: [NSAttributedString.Key: Any] = [
             .font: Style.Font.main(size: 15),
