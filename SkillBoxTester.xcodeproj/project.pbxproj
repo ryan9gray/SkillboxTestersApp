@@ -11,8 +11,8 @@
 		E510BFD724F291AF00492DEE /* FormKeyboardBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E510BFD624F291AF00492DEE /* FormKeyboardBehavior.swift */; };
 		E510BFD924F2973500492DEE /* ProductFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E510BFD824F2973500492DEE /* ProductFlow.swift */; };
 		E510BFDB24F29AED00492DEE /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E510BFDA24F29AED00492DEE /* LocalStore.swift */; };
-		E510BFDD24F2B03600492DEE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E510BFDC24F2B03600492DEE /* GoogleService-Info.plist */; };
 		E510BFDF24F2B11600492DEE /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E510BFDE24F2B11600492DEE /* AuthService.swift */; };
+		E562A41D2518D76F003ABE3D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E562A41C2518D76F003ABE3D /* GoogleService-Info.plist */; };
 		E56C1F5324E5C62000EA5816 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56C1F5224E5C62000EA5816 /* Auth.storyboard */; };
 		E56C1F5524E5C62800EA5816 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56C1F5424E5C62800EA5816 /* Feed.storyboard */; };
 		E56C1F5724E5C63300EA5816 /* Discount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56C1F5624E5C63300EA5816 /* Discount.storyboard */; };
@@ -85,8 +85,8 @@
 		E510BFD624F291AF00492DEE /* FormKeyboardBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormKeyboardBehavior.swift; sourceTree = "<group>"; };
 		E510BFD824F2973500492DEE /* ProductFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFlow.swift; sourceTree = "<group>"; };
 		E510BFDA24F29AED00492DEE /* LocalStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
-		E510BFDC24F2B03600492DEE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E510BFDE24F2B11600492DEE /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		E562A41C2518D76F003ABE3D /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E56C1F5224E5C62000EA5816 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		E56C1F5424E5C62800EA5816 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		E56C1F5624E5C63300EA5816 /* Discount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Discount.storyboard; sourceTree = "<group>"; };
@@ -263,10 +263,10 @@
 				E5C9B08424FA86F800ED10D6 /* View */,
 				E56C1F5024E5C5B400EA5816 /* Storyboards */,
 				E5FEEE6024E5AE59002D1D15 /* Assets.xcassets */,
-				E510BFDC24F2B03600492DEE /* GoogleService-Info.plist */,
 				E5FEEEAC24E5BC5B002D1D15 /* Localizable.strings */,
 				E5FEEE6224E5AE59002D1D15 /* LaunchScreen.storyboard */,
 				E5F657DF24F164D60058F549 /* InfoPlist.strings */,
+				E562A41C2518D76F003ABE3D /* GoogleService-Info.plist */,
 				E5FEEE6524E5AE59002D1D15 /* Info.plist */,
 			);
 			path = SkillBoxTester;
@@ -475,7 +475,7 @@
 				E56C1F6024E5C97D00EA5816 /* ProductTableViewCell.xib in Resources */,
 				E56C1F5724E5C63300EA5816 /* Discount.storyboard in Resources */,
 				E5FEEE5F24E5AE57002D1D15 /* Main.storyboard in Resources */,
-				E510BFDD24F2B03600492DEE /* GoogleService-Info.plist in Resources */,
+				E562A41D2518D76F003ABE3D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -757,7 +757,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H8QA8368M8;
+				DEVELOPMENT_TEAM = 44PP3BMTYU;
 				INFOPLIST_FILE = SkillBoxTester/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -765,7 +765,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LIBTOOLFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.anydog.t2m.test;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.skillbox.testapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -778,7 +778,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H8QA8368M8;
+				DEVELOPMENT_TEAM = 44PP3BMTYU;
 				INFOPLIST_FILE = SkillBoxTester/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -786,7 +786,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LIBTOOLFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.anydog.t2m.test;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.skillbox.testapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

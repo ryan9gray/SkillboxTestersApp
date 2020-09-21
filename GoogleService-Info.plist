@@ -3,23 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>550710867086-bv54ncolaiake2b83n4k3e214pcpm7qe.apps.googleusercontent.com</string>
+	<string>679374691219-3n1bas5meoegm9l1m27d6serm3e6etqs.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.550710867086-bv54ncolaiake2b83n4k3e214pcpm7qe</string>
-	<key>ANDROID_CLIENT_ID</key>
-	<string>550710867086-k1kohiski18q0ebdfggebbhohoh7nl6a.apps.googleusercontent.com</string>
+	<string>com.googleusercontent.apps.679374691219-3n1bas5meoegm9l1m27d6serm3e6etqs</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAljWlWoxvfzKMvDXzLlhUELAxJpE1wBpA</string>
+	<string>AIzaSyBO50mHRdJzk1DxvrtkVBjQiugjMM6zBRc</string>
 	<key>GCM_SENDER_ID</key>
-	<string>550710867086</string>
+	<string>679374691219</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.anydog.t2m.test</string>
+	<string>ru.skillbox.testapp</string>
 	<key>PROJECT_ID</key>
-	<string>anydog-1583423075853</string>
+	<string>skillboxtestapp</string>
 	<key>STORAGE_BUCKET</key>
-	<string>anydog-1583423075853.appspot.com</string>
+	<string>skillboxtestapp.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -31,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:550710867086:ios:bcf802b1d5985696b1c5df</string>
+	<string>1:679374691219:ios:652c6e2d2dbd8208e82666</string>
 	<key>DATABASE_URL</key>
-	<string>https://anydog-1583423075853.firebaseio.com</string>
+	<string>https://skillboxtestapp.firebaseio.com</string>
 </dict>
 </plist>
